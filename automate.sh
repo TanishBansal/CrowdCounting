@@ -4,8 +4,8 @@ sudo rm  ImagesOutput/*
 ffmpeg -i VideoInput/video.mp4 -vf fps=20 Images/image%01d.jpg -hide_banner
 
 cd Images/
-o=$(ls -1 --file-type | grep -v '/$' | wc -l)
-export o
+no_files=$(ls -1 --file-type | grep -v '/$' | wc -l)
+export no_files
 cd ..
 python3 Inference.py
 ffmpeg -framerate 20 -i ImagesOutput/image%01d.jpg VideoOutput/video.mp4
