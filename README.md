@@ -17,7 +17,7 @@ OpenCV 3.4
 
 #### Build using Repositories
 
-[Based on ](https://github.com/leeyeehoo/CSRNet-pytorch)
+[Official Pytorch Implementation](https://github.com/leeyeehoo/CSRNet-pytorch)
 
 
 
@@ -25,7 +25,7 @@ OpenCV 3.4
 
 
 
-
+#### Result
 
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/DLFcrytElG8/0.jpg)]
