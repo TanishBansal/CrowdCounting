@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib import cm as c
 from keras.models import model_from_json
 
-no=os.environ["o"]
+no=os.environ["no_files"]
 def load_model():
     # Function to load and return neural network model 
     json_file = open('models/Model.json', 'r')
@@ -48,9 +48,9 @@ def predict(path):
 for x in range(1,int(no)):
 
     ans,img,hmap = predict("Images/"+"image"+str(x)+".jpg")
-    j=cv2.imread("Images/"+"image"+str(x)+".jpg")
+    read_image=cv2.imread("Images/"+"image"+str(x)+".jpg")
     print(ans)
-    new=cv2.putText(j,str(ans),(0,50),cv2.FONT_HERSHEY_DUPLEX,2,(255,255,255),2,cv2.LINE_AA)
+    new=cv2.putText(read_image,str(ans),(0,50),cv2.FONT_HERSHEY_DUPLEX,2,(255,255,255),2,cv2.LINE_AA)
     filename="ImagesOutput/"+"image"+str(x)+".jpg"
     cv2.imwrite(filename,new)
 
